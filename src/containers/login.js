@@ -42,7 +42,9 @@ export default function Login() {
   async function handleLoginEcps(event) {
     event.preventDefault();
 
-    fetch("auth/delegatedlogin", { method: 'POST' })
+    fetch("/oauth/login", { 
+      method: 'POST',
+    })
     .then(response => {
         // HTTP 301 response
         // HOW CAN I FOLLOW THE HTTP REDIRECT RESPONSE?
